@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\Projects\ProjectsController;
+use App\Http\Controllers\About\AboutController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +18,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('content.welcome');
+Route::get('/', [WelcomeController::class, 'index'])->name('index');
+
+Route::prefix('/projects')->name('projects.')->group(function () {
+    Route::get('/', [ProjectsController::class, 'index'])->name('index');
 });
+
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
