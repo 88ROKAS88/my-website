@@ -8,9 +8,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link @if(\Request::is('/')) active @endif " aria-current="page" href="{{ route('index') }}">Home</a>
+                    <a class="nav-link @if(\Request::is('projects')) active @endif " href="{{ route('projects.index') }}">Projects</a>
+                    <a class="nav-link @if(\Request::is('about')) active @endif " href="{{ route('about') }}">About</a>
                     <a class="nav-link disabled">Disabled</a>
                 </div>
             </div>

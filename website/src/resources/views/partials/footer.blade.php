@@ -1,3 +1,3 @@
-<footer>
-    <h1>FOOTER</h1>
+<footer class="text-bg-light p-3">
+    Footer placeholder
 </footer>
