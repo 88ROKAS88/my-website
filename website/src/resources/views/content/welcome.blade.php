@@ -2,34 +2,27 @@
 @section('title','Welcome')
 @section('content')
 
-<h1>CONTENT- welcome</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-        </tr>
-    </tbody>
-</table>
+<div class="my-5">
+    <h4 class="text-center mt-5">Junior full stack developer</h4>
+    <h5 class="text-center">Rokas</h5>
+    <h4>My stack:</h4>
+    <ul>
+        <li>Laravel</li>
+        <li>Vue.js</li>
+        <li>Bootstrap</li>
+        <li>PHP</li>
+        <li>Javascript</li>
+        <li>SQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <h4>Software I'm using:</h4>
+    <ul>
+        <li>Docker</li>
+        <li>GitHub Desktop</li>
+        <li>VS Code</li>
+        <li>NPM</li>
+    </ul>
+    <p></p>
+</div>
 @endsection
