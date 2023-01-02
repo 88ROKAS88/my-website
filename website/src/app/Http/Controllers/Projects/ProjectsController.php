@@ -14,4 +14,8 @@ class ProjectsController extends Controller
         $projects = Project::get();
         return view('content.projects', compact('projects'));
     }
+    public function show(Project $project)
+    {
+        return view('content.projectShow', compact('project'));
+    }
 }

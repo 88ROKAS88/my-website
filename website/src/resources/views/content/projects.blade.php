@@ -10,7 +10,7 @@
     <div class="card-body">
         <h5 class="card-title">{{ $project->title }}</h5>
         <p class="card-text">{{ $project->short_description }}</p>
-        <a href="#" class="btn btn-outline-dark">Read more</a>
+        <a href="{{ route('projects.show', $project->id) }}" class="btn btn-outline-dark">Read more</a>
     </div>
 </div>
 @endforeach

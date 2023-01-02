@@ -22,6 +22,7 @@ Route::get('/', [WelcomeController::class, 'index'])->name('index');
 
 Route::prefix('/projects')->name('projects.')->group(function () {
     Route::get('/', [ProjectsController::class, 'index'])->name('index');
+    Route::get('/{project}/show', [ProjectsController::class, 'show'])->name('show');
 });
 
 Route::get('/about', [AboutController::class, 'about'])->name('about');
