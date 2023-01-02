@@ -19,16 +19,5 @@ class ProjectSeeder extends Seeder
     public function run()
     {
         \App\Models\Project::factory(10)->create();
-
-        // \App\Models\Project::factory(1)->create([
-        //     'title' => 'Test User',
-
-        // ]);
-
-        // DB::table('projects')->insert([
-        //     'title' => Str::random(10),
-        //     'description' => Str::random(10) . '@gmail.com',
-
-        // ]);
     }
 }
