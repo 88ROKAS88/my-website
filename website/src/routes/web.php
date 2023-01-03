@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open spa ruoted links
+
 Route::get('/', [WelcomeController::class, 'index'])->name('index');
 
 Route::prefix('/projects')->name('projects.')->group(function () {
