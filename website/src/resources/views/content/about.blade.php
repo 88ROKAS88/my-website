@@ -9,6 +9,6 @@
     <h3 class="mt-5">Contact</h3>
     <p class="my-3">rokas8misevicius@gmail.com </p>
     <h3 class="mt-5">Follow me on</h3>
-    </p class="my-3"> https://github.com/88ROKAS88</p>
+    <p class="my-3"> https://github.com/88ROKAS88</p>
 </div>
 @endsection
