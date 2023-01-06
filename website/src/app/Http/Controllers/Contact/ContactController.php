@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\About;
+namespace App\Http\Controllers\Contact;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AboutController extends Controller
+class ContactController extends Controller
 {
-    public function about()
+    public function contact()
     {
         return view('content.about');
     }
