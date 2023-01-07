@@ -13,11 +13,15 @@
 </head>
 
 <body>
-    <div class="container py-3">
+    <div class="bg-secondary-subtle">
         @include('partials.header')
+    </div>
+    <div class="container py-3">
         <main>
             @yield('content')
         </main>
+    </div>
+    <div class="bg-secondary-subtle">
         @include('partials.footer')
     </div>
 </body>
