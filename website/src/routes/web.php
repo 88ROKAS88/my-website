@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\Projects\ProjectsController;
-use App\Http\Controllers\About\AboutController;
+use App\Http\Controllers\Projects\ProjectController;
+use App\Http\Controllers\Contact\ContactController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -18,16 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open spa ruoted links
+Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open SPA routed links
 
 Route::get('/', [WelcomeController::class, 'index'])->name('index');
 
 Route::prefix('/projects')->name('projects.')->group(function () {
-    Route::get('/', [ProjectsController::class, 'index'])->name('index');
-    Route::get('/{project}/show', [ProjectsController::class, 'show'])->name('show');
+    Route::get('/', [ProjectController::class, 'index'])->name('index');
+    Route::get('/{project}/show', [ProjectController::class, 'show'])->name('show');
 });
 
-Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 
 
