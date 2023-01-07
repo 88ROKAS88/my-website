@@ -7,6 +7,7 @@ export default defineConfig({
         laravel({
             input: [
                 "resources/css/bootstrap.min.css",
+                "resources/js/bootstrap.bundle.min.js",
                 "resources/js/app-vue/main.js",
             ],
             refresh: true,
