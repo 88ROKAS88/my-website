@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <div class="py-5">
+    <div class="my-5">
         <h4 class="text-center mt-5">Junior full stack developer</h4>
         <h5 class="text-center">Rokas</h5>
         <h4>My stack:</h4>

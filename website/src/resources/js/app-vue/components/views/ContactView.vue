@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center py-5">
+    <div class="text-center my-5">
         <h4 class="mt-5">Junior full stack developer</h4>
         <h4 class="mt-1">Rokas Misevičius</h4>
         <h3 class="mt-5">Contact</h3>

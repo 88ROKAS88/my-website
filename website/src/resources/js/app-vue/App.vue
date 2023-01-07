@@ -4,10 +4,6 @@ import FooterView from "./components/views/partials/FooterView.vue";
 </script>
 <template>
     <HeaderView />
-    <div class="bg-white">
-        <div class="container">
-            <RouterView></RouterView>
-        </div>
-    </div>
+    <RouterView></RouterView>
     <FooterView />
 </template>
