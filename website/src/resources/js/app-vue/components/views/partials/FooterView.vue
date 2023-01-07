@@ -1,3 +1,3 @@
 <template>
-    <footer class="text-bg-light p-3">Footer placeholder</footer>
+    <footer class="p-3 container">Footer placeholder</footer>
 </template>
