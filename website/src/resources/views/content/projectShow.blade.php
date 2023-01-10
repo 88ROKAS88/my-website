@@ -9,10 +9,25 @@
             <img src="{{ $project->image }}" class="card-img-top col-lg-6" alt="...">
         </div>
         <div class="card-body col-lg-6">
-            <h5 class="card-title">{{ $project->title }}</h5>
-            <p class="card-text">{{ $project->description }}</p>
-            <a href="{{ route('projects.index') }}" class="btn btn-outline-dark">Go back</a>
+            <h4 class="card-title text-center">{{ $project->title }}</h4>
+            <p class="card-text"> {{ $project->short_description }} <br /> <br /> {!! nl2br(e($project->description)) !!} </p>
+
         </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title text-center">Tools</h5>
+        <p class="card-text">{!! nl2br(e($project->tools)) !!}</p>
+        <h5 class="card-title text-center">Links</h5>
+        <ul>
+            @foreach ($links as $link)
+            <li class="text-center list-group-item mt-1">
+                <a target="_blank" class="text-black text-uppercase text-decoration-none" href="{{ $link->link }}"> {{ $link->title }} </a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+    <div class="d-flex justify-content-center my-1">
+        <a href="{{ route('projects.index') }}" class="btn btn-outline-dark">Go back</a>
     </div>
 </div>
 

@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    <div class="bg-secondary-subtle">
+    <div class="min-vh-100 bg-secondary-subtle">
         @include('partials.header')
-    </div>
-    <div class="container py-3">
-        <main>
-            @yield('content')
-        </main>
-    </div>
-    <div class="bg-secondary-subtle">
+
+        <div class="bg-white">
+            <main class="container py-3">
+                @yield('content')
+            </main>
+        </div>
+
         @include('partials.footer')
     </div>
 </body>
