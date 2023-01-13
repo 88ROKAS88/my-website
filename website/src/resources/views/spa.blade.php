@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="min-vh-100 bg-secondary-subtle" id="app">
+    <div class="min-vh-100 bg-dark" id="app">
     </div>
 </body>
 

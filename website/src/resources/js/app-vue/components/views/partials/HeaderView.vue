@@ -1,6 +1,9 @@
 <template>
     <header class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav
+            class="navbar navbar-dark bg-dark navbar-expand-md"
+            data-bs-theme="dark"
+        >
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Portfolio Website</a>
                 <button
