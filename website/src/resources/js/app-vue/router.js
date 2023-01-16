@@ -4,6 +4,7 @@ import IndexView from "./components/views/IndexView.vue";
 import ProjectsView from "./components/views/ProjectsView.vue";
 import ProjectShowView from "./components/views/ProjectShowView.vue";
 import ContactView from "./components/views/ContactView.vue";
+import CookiePolicyView from "./components/views/CookiePolicyView.vue";
 
 const router = createRouter({
     history: createWebHistory("/spa"),
@@ -17,6 +18,11 @@ const router = createRouter({
             name: "project.show",
         },
         { path: "/contact", component: ContactView, name: "contact" },
+        {
+            path: "/cookiepolicy",
+            component: CookiePolicyView,
+            name: "cookiepolicy",
+        },
     ],
 });
 

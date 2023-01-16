@@ -28,6 +28,7 @@ Route::prefix('/projects')->name('projects.')->group(function () {
 });
 
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::view('/cookiepolicy', 'content/cookiepolicy')->name('cookiepolicy');
 
 
 
