@@ -5,7 +5,14 @@
             data-bs-theme="dark"
         >
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Portfolio Website</a>
+                <RouterLink
+                    :to="{
+                        name: 'index',
+                    }"
+                    class="navbar-brand"
+                >
+                    Rokas Misevičius
+                </RouterLink>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -19,16 +26,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <RouterLink
-                            :to="{
-                                name: 'index',
-                            }"
-                            type="button"
-                            class="nav-link"
-                            active-class="active"
-                        >
-                            Home
-                        </RouterLink>
                         <RouterLink
                             :to="{
                                 name: 'projects.index',
