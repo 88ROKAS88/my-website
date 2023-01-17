@@ -48,6 +48,6 @@ onBeforeMount(async () => {
                 </div>
             </div>
         </div>
-        <h3 v-else>Loading...</h3>
+        <h3 v-else class="py-5 text-center">Loading...</h3>
     </div>
 </template>
