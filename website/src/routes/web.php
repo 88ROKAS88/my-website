@@ -18,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::redirect('/', '/spa');
+
 Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open SPA routed links
 
-Route::get('/', [WelcomeController::class, 'index'])->name('index');
+Route::get('/welcome', [WelcomeController::class, 'index'])->name('index');
 
 Route::prefix('/projects')->name('projects.')->group(function () {
     Route::get('/', [ProjectController::class, 'index'])->name('index');
