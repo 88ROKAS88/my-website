@@ -2,7 +2,12 @@
 @section('title','Projects')
 @section('content')
 
-<p>Here u can find my previos projects and theirs github repositories.</p>
+<p>My projects.</p>
+@auth
+@if( Auth::user()->is_admin )
+<a href="{{ route('projects.admin.create') }}" class="mx-1 btn btn-outline-danger my-1">Create project</a>
+@endif
+@endauth
 
 @foreach ($projects as $project)
 <div class="card my-1">
@@ -20,6 +25,11 @@
     <div class="d-flex justify-content-center my-1">
 
         <a href="{{ route('projects.show', $project->id) }}" class="btn btn-outline-dark my-1">Read more</a>
+        @auth
+        @if( Auth::user()->is_admin )
+        <a href="{{ route('projects.admin.delete', $project->id) }}" class="mx-1 btn btn-outline-danger my-1">delete</a>
+        @endif
+        @endauth
     </div>
 </div>
 @endforeach

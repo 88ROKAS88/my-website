@@ -25,12 +25,28 @@ Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open SPA routed lin
 Route::get('/welcome', [WelcomeController::class, 'index'])->name('index');
 
 Route::prefix('/projects')->name('projects.')->group(function () {
+
+
+    Route::prefix('/admin')->middleware('auth')->name('admin.')->group(function () {
+
+        Route::get('/create', [ProjectController::class, 'create'])->name('create');
+        Route::post('/save', [ProjectController::class, 'save'])->name('save');
+        Route::get('/{project}/delete', [ProjectController::class, 'delete'])->name('delete');
+
+        Route::get('/{project}/createlink', [ProjectController::class, 'createlink'])->name('createlink');
+        Route::post('/savelink', [ProjectController::class, 'savelink'])->name('savelink');
+    });
+
+
     Route::get('/', [ProjectController::class, 'index'])->name('index');
     Route::get('/{project}/show', [ProjectController::class, 'show'])->name('show');
 });
 
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
 Route::view('/cookiepolicy', 'content/cookiepolicy')->name('cookiepolicy');
+
+
 
 
 
