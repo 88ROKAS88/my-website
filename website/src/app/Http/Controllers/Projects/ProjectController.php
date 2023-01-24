@@ -14,13 +14,13 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::orderBy('id', 'DESC')->get();
-        return view('content.projects', compact('projects'));
+        return view('content.projects.projects', compact('projects'));
     }
     public function show(Project $project)
     {
         // TEMPORARY SOLUTION
         $links = ProjectLink::where('project_id', '=', $project->id)->get();
-        return view('content.projectShow', compact('project', 'links'));
+        return view('content.projects.projectShow', compact('project', 'links'));
     }
 
 
