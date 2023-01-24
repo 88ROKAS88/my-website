@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/', '/spa');
+Route::redirect('/', '/welcome');
 
 Route::view('/spa{any}', 'spa')->where('any', '.*'); // Lets open SPA routed links
 
