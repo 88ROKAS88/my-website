@@ -49,6 +49,26 @@ class ProjectController extends Controller
         }
         return redirect()->route('projects.index');
     }
+    public function edit(Project $project)
+    {
+        return view('content.projects.edit', compact('project'));
+    }
+    public function saveChanges(Request $request)
+    {
+        if (Auth::user()->is_admin) {
+            // $project = new Project();
+            // dd('id', $request->get('id'), 'title', $request->get('title'));
+            $project = Project::find($request->get('id'));
+            $project->title             = $request->get('title');
+            $project->short_description = $request->get('short_description');
+            $project->description       = $request->get('description');
+            $project->tools             = $request->get('tools');
+            $project->image             = $request->get('image');
+            $project->save();
+            return redirect()->route('projects.show', $project->id);
+        }
+        return redirect()->route('projects.index');
+    }
 
 
 

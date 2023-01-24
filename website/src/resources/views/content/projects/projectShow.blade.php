@@ -31,6 +31,9 @@
     <div class="d-flex justify-content-center my-1">
         <a href="{{ route('projects.admin.createlink', $project->id) }}" class="mx-1 btn btn-outline-danger my-1">Add link</a>
     </div>
+    <div class="d-flex justify-content-center mt-5">
+        <a href="{{ route('projects.admin.edit', $project->id) }}" class="mx-1 btn btn-outline-danger my-1">Edit project</a>
+    </div>
     @endif
     @endauth
     <div class="d-flex justify-content-center my-1">

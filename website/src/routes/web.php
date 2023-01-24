@@ -32,6 +32,8 @@ Route::prefix('/projects')->name('projects.')->group(function () {
         Route::get('/create', [ProjectController::class, 'create'])->name('create');
         Route::post('/save', [ProjectController::class, 'save'])->name('save');
         Route::get('/{project}/delete', [ProjectController::class, 'delete'])->name('delete');
+        Route::get('/{project}/edit', [ProjectController::class, 'edit'])->name('edit');
+        Route::post('/{project}/saveChanges', [ProjectController::class, 'saveChanges'])->name('saveChanges');
 
         Route::get('/{project}/createlink', [ProjectController::class, 'createlink'])->name('createlink');
         Route::post('/savelink', [ProjectController::class, 'savelink'])->name('savelink');
