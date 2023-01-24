@@ -6,6 +6,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+                "resources/css/app.css",
+                "resources/js/app.js",
                 "resources/css/bootstrap.min.css",
                 "resources/js/bootstrap.bundle.min.js",
                 "resources/js/app-vue/main.js",
