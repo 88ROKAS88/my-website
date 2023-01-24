@@ -133,5 +133,13 @@
             </tbody>
         </table>
     </div>
+    <div class="row my-3">
+        <div class="col-md-6">
+            <a class="btn btn-outline-dark my-1 mx-1 col-12" href="{{ route('projects.index') }}">Projects</a>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-outline-dark my-1 mx-1 col-12" href="{{ route('contact') }}">Contact</a>
+        </div>
+    </div>
 </div>
 @endsection
