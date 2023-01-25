@@ -1,7 +1,7 @@
 # my-website
 
 my portfolio website
-www.web-dev-rm.com
+<http://web-dev-rm.com/>
 
 ## Routes
 
