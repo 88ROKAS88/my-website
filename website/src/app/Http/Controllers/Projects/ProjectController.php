@@ -56,8 +56,6 @@ class ProjectController extends Controller
     public function saveChanges(Request $request)
     {
         if (Auth::user()->is_admin) {
-            // $project = new Project();
-            // dd('id', $request->get('id'), 'title', $request->get('title'));
             $project = Project::find($request->get('id'));
             $project->title             = $request->get('title');
             $project->short_description = $request->get('short_description');

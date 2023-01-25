@@ -27,7 +27,7 @@ Route::get('/welcome', [WelcomeController::class, 'index'])->name('index');
 Route::prefix('/projects')->name('projects.')->group(function () {
 
 
-    Route::prefix('/admin')->middleware('auth')->name('admin.')->group(function () {
+    Route::prefix('/admin')->middleware(['auth', 'administrator'])->name('admin.')->group(function () {
 
         Route::get('/create', [ProjectController::class, 'create'])->name('create');
         Route::post('/save', [ProjectController::class, 'save'])->name('save');
