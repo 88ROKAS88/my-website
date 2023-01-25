@@ -11,13 +11,17 @@ There are 2 version's of this webpage - WEB and SPA.
 
   - /
   - /spa (Single Page Application)
+
     **vue-router routes start**
+
     - /
     - /projects
     - /projects/:project
     - /contact
     - /cookiepolicy
+
       **vue-router routes end**
+
   - welcome
   - contact
   - cookiepolicy
