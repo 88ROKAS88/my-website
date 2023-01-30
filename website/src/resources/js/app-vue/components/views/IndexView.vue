@@ -134,13 +134,101 @@
             <div class="col-md-6"></div>
         </div>
 
-        <h4>Software I'm using:</h4>
-        <ul>
-            <li>Docker</li>
-            <li>GitHub Desktop</li>
-            <li>VS Code</li>
-            <li>NPM</li>
-        </ul>
-        <p></p>
+        <div class="col-md-6 text-center mt-5">
+            <h4>Software I'm using:</h4>
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <td>
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://git-scm.com/"
+                            >
+                                <span class="fw-bold">Git</span>
+                            </a>
+                            <br />
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://github.com/"
+                            >
+                                GitHub Desktop
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://www.docker.com/"
+                            >
+                                <span class="fw-bold">Docker</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://www.npmjs.com/"
+                            >
+                                <span class="fw-bold">NPM</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://code.visualstudio.com/"
+                            >
+                                <span class="fw-bold">VS Code</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a
+                                target="_blank"
+                                class="text-black text-decoration-none"
+                                href="https://www.heidisql.com/"
+                            >
+                                <span class="fw-bold">HeidiSQL</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-6">
+                <RouterLink
+                    :to="{
+                        name: 'projects.index',
+                    }"
+                    type="button"
+                    class="btn btn-outline-dark my-1 mx-1 col-12"
+                    active-class="active"
+                >
+                    Projects
+                </RouterLink>
+            </div>
+            <div class="col-md-6">
+                <RouterLink
+                    :to="{
+                        name: 'contact',
+                    }"
+                    type="button"
+                    class="btn btn-outline-dark my-1 mx-1 col-12"
+                    active-class="active"
+                >
+                    Contact
+                </RouterLink>
+            </div>
+        </div>
     </div>
 </template>
